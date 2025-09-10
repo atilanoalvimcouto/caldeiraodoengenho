@@ -1,0 +1,19 @@
+site_name: Comparação de Preço de Alimentos - CEASA
+repo_url: http://mysiterepo.com
+repo_name: Comparação de Preçoss Fomte
+edit_uri: tree/main/docs
+
+theme: 
+  name: material
+  language: pt-BR
+
+plugins:
+- search
+- mkdocstrings:
+    enabled: !ENV [ENABLE_MKDOCSTRINGS, true]
+    locale: pt
+    handlers:
+      python:
+        paths: [src\analiseprecoalimentos]
+        options:
+          show_source: true
